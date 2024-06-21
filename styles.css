@@ -1,0 +1,194 @@
+/* Global styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Menggunakan min-height agar footer tetap di bawah jika konten kurang */
+    margin: 0;
+    color: #333;
+    padding-bottom: 60px; /* Padding bawah untuk mengakomodasi tinggi footer */
+    position: relative; /* Menambahkan posisi relatif agar bisa di-overlap dengan footer */
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.header {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.header .logo {
+    font-size: 1.5em;
+    color: #ff6f91;
+    margin: 0;
+}
+
+.header .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header .nav ul li {
+    margin-right: 20px;
+}
+
+.header .nav ul li:last-child {
+    margin-right: 0;
+}
+
+.header .nav .nav-link {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.header .nav .nav-link:hover {
+    color: #ff6f91;
+}
+
+/* Main content */
+.main-content {
+    margin-top: 80px; /* Adjust based on header height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 90%;
+    max-width: 600px;
+}
+
+.content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 14px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    width: calc(100% - 28px);
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+button {
+    padding: 14px 28px;
+    background-color: #ff6f91;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(255, 111, 145, 0.2);
+}
+
+button:hover {
+    background-color: #ff4b7d;
+    transform: scale(1.05);
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #ff6f91;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    background-color: transparent;
+    color: #fff;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    position: fixed; /* Mengubah posisi menjadi fixed */
+    bottom: 0;
+    left: 50%; /* Menengahkan footer */
+    transform: translateX(-50%); /* Menengahkan footer */
+}
+
+.footer .footer-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .social-icons {
+    display: none; /* Menghilangkan tampilan social icons */
+}
+
+.footer p {
+    margin-top: 10px; /* Menambah jarak antara social icons dengan teks footer */
+}
+
+.footer p a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Header */
+.header .nav .nav-link:hover {
+    color: #333 !important; /* Mengubah warna kembali agar tidak berubah saat dihover */
+}
+
+/* Footer */
+.footer .social-icons a:hover,
+.footer p a:hover {
+    color: #fff !important; /* Mengubah warna kembali agar tidak berubah saat dihover */
+}
+
